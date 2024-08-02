@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "276065236102",
+    "project_id": "yollararo",
+    "storage_bucket": "yollararo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276065236102:android:067ffacb0c4e2a0d5b4d07",
+        "android_client_info": {
+          "package_name": "uz.yollararo.mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn0yP1dYSnzKftXIf4gpf0VxCsXqmLi2w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
