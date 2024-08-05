@@ -8,23 +8,24 @@ import 'package:yollararo/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 
-void main() async {
+void main() {
+  /// Run App in Error Zone
+  runZonedGuarded<Future<void>>(() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   /// Initialize Firebase
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
 
   /// Initialize Hive for local storage
-  Hive.initFlutter;
+  Hive.initFlutter();
+
+  /// Set up error handling for Flutter errors
+  FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
 
   /// Initialize Dependencies
   setup();
 
-  /// Run App in Error Zone
-  runZonedGuarded<Future<void>>(() async {
-    runApp(const App());
-  }, (error, stack) {
-    FirebaseCrashlytics.instance.recordError(error, stack);
-  });
+  /// Run the App
+  runApp(const App());
+  }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
 }
