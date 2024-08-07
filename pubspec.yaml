@@ -34,6 +34,7 @@ dependencies:
 
   # Geolocation services
   geolocator: ^11.1.0
+  yandex_maps_mapkit: ^4.7.0-beta
 
   # Firebase services
   firebase_core: ^2.24.2
@@ -64,6 +65,7 @@ flutter:
 
   assets:
     - assets/logos/
+    - assets/icons/
     - assets/images/
 
   # fonts:
