@@ -10,6 +10,7 @@ class AppRouter extends RootStackRouter {
   List<AutoRoute> get routes {
     return [
       AutoRoute(page: AnimatedSplashRoute.page, initial: true),
+      AutoRoute(page: OnBoardingRoute.page),
       AutoRoute(page: HomeRoute.page),
     ];
   }

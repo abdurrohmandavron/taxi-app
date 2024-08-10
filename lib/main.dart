@@ -18,7 +18,11 @@ void main() {
     await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
     /// Initialize Hive for local storage
-    Hive.initFlutter();
+    await Hive.initFlutter();
+
+    /// Check if it's the first time the user opens the app
+    final onBoardingBox = await Hive.openBox('onBoarding');
+    if (!onBoardingBox.containsKey('isFirstTime')) await onBoardingBox.put('isFirstTime', true);
 
     /// Set up error handling for Flutter errors
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
