@@ -1,10 +1,11 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:yollararo/router/router.gr.dart';
 import 'package:yollararo/cubits/splash_cubit.dart';
+import 'package:yollararo/screens/splash/widgets/splash_text.dart';
+import 'package:yollararo/screens/splash/widgets/splash_lockup.dart';
+import 'package:yollararo/widgets/containers/gradient_container.dart';
+import 'package:yollararo/screens/splash/widgets/splash_background_icon.dart';
 
 @RoutePage()
 class AnimatedSplashScreen extends StatelessWidget {
@@ -15,75 +16,37 @@ class AnimatedSplashScreen extends StatelessWidget {
     return BlocProvider(
       create: (_) => SplashScreenCubit()..startAnimation(),
       child: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                Color(0xFF042A49),
-                Color(0xFF042A49),
-              ],
-            ),
-          ),
+        body: YGradientContainer(
+          /// Container with LinearGradient
+
           child: BlocListener<SplashScreenCubit, SplashScreenState>(
-            listener: (context, state) {
-              if (state.text.isNotEmpty) {
-                Future.delayed(const Duration(seconds: 2), () => context.router.replace(const HomeRoute()));
-              }
-            },
+            /// State changes listener
+
+            listener: (context, state) => BlocProvider.of<SplashScreenCubit>(context).redirect(context, state),
             child: BlocBuilder<SplashScreenCubit, SplashScreenState>(
-              builder: (context, state) {
-                return Stack(
-                  children: [
-                    Positioned(
-                      top: -100,
-                      left: -65,
-                      child: AnimatedOpacity(
-                        opacity: state.logoOpacity != 1 ? state.logoOpacity : .15,
-                        duration: const Duration(milliseconds: 600),
-                        child: Transform.rotate(
-                          angle: 15 * (pi / 180.0),
-                          child: const Image(image: AssetImage('assets/logos/yollararo-logo.png'), color: Color(0xFF0085FF)),
-                        ),
-                      ),
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        const Spacer(),
-                        AnimatedOpacity(
-                          opacity: state.nameOpacity,
-                          duration: const Duration(seconds: 1),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Image.asset('assets/logos/yollararo-logo.png', width: 72),
-                              const Text(
-                                "Yo'llararo",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
-                        ),
-                        const Spacer(),
-                        AnimatedOpacity(
-                          opacity: state.text.isNotEmpty ? 1.0 : 0.0,
-                          duration: const Duration(seconds: 1),
-                          child: Text(
-                            state.text,
-                            textAlign: TextAlign.center,
-                            style: const TextStyle(fontSize: 16, color: Colors.white),
-                          ),
-                        ),
-                        const SizedBox(height: 16),
-                      ],
-                    ),
-                  ],
-                );
-              },
+              /// Build Widget
+
+              builder: (context, state) => Stack(
+                children: [
+                  /// Large Transparent Icon
+                  YSplashBackgroundIcon(state: state),
+
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      /// Brand Lockup
+                      const Spacer(),
+                      YSplashLockup(state: state),
+                      const Spacer(),
+
+                      /// Slogan
+                      YSplashText(state: state),
+                      const SizedBox(height: 16),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),
