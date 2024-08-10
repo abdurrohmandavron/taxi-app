@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yollararo/router/router.dart';
+import 'package:yollararo/utils/theme/theme.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -9,10 +10,7 @@ class App extends StatelessWidget {
     final appRouter = AppRouter();
 
     return MaterialApp.router(
-      theme: ThemeData(
-        useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
+      theme: YTheme.yTheme,
       title: "Yo'llararo",
       routerConfig: appRouter.config(),
       debugShowCheckedModeBanner: false,
