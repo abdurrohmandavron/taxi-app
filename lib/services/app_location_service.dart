@@ -1,5 +1,5 @@
 import 'package:geolocator/geolocator.dart';
-import 'package:yollararo/models/lat_long_model.dart';
+import 'package:yollararo/data/models/lat_long_model.dart';
 
 abstract class AppLocation {
   Future<AppLatLong> getCurrentLocation();

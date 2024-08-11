@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yollararo/router/router.dart';
-import 'package:yollararo/utils/theme/theme.dart';
+import 'package:yollararo/presentations/themes/theme.dart';
 
 class App extends StatelessWidget {
   const App({super.key});

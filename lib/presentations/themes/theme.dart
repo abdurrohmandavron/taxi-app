@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yollararo/utils/theme/text_theme.dart';
+import 'package:yollararo/presentations/themes/text_theme.dart';
 
 class YTheme {
   static ThemeData yTheme = ThemeData(

@@ -3,7 +3,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:yollararo/router/router.gr.dart';
-import 'package:yollararo/screens/home/home_screen.dart';
+import 'package:yollararo/presentations/screens/home/home_screen.dart';
 
 class OnBoardingCubit extends Cubit<int> {
   OnBoardingCubit() : super(0);

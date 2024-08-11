@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/annotations.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:yollararo/cubits/onboarding_cubit.dart';
-import 'package:yollararo/screens/onboarding/widgets/onboarding_skip.dart';
-import 'package:yollararo/screens/onboarding/widgets/onboarding_page_view.dart';
-import 'package:yollararo/screens/onboarding/widgets/onboarding_next_button.dart';
-import 'package:yollararo/screens/onboarding/widgets/onboarding_dot_navigation.dart';
+import 'package:yollararo/presentations/screens/onboarding/widgets/onboarding_skip.dart';
+import 'package:yollararo/presentations/screens/onboarding/widgets/onboarding_page_view.dart';
+import 'package:yollararo/presentations/screens/onboarding/widgets/onboarding_next_button.dart';
+import 'package:yollararo/presentations/screens/onboarding/widgets/onboarding_dot_navigation.dart';
 
 @RoutePage()
 class OnBoardingScreen extends StatelessWidget {
