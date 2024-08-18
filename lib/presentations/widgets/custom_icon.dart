@@ -5,23 +5,26 @@ class YIcon extends StatelessWidget {
     this.icon, {
     super.key,
     this.color,
-    this.applyBackground,
+    this.size = 18,
+    this.width = 32,
+    this.height = 32,
+    this.backgroundColor,
   });
 
   final IconData icon;
-  final Color? color;
-  final bool? applyBackground;
+  final double width, height, size;
+  final Color? color, backgroundColor;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 32,
-      height: 32,
+      width: width,
+      height: height,
       decoration: BoxDecoration(
-        color: const Color(0xFFF2F4F7),
+        color: backgroundColor,
         borderRadius: BorderRadius.circular(10),
       ),
-      child: Icon(icon, size: 18, color: color),
+      child: Icon(icon, size: size, color: color),
     );
   }
 }

@@ -3,7 +3,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:yollararo/router/router.gr.dart';
-import 'package:yollararo/presentations/screens/home/home_screen.dart';
 
 class OnBoardingCubit extends Cubit<int> {
   OnBoardingCubit() : super(0);
@@ -21,9 +20,7 @@ class OnBoardingCubit extends Cubit<int> {
   void nextPage(BuildContext context) {
     if (state == 2) {
       storage.put("isFirstTime", false);
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (_) => const HomeScreen()),
-      );
+      context.router.replace(const SigninRoute());
     } else {
       int page = state + 1;
       emit(page);

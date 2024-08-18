@@ -24,6 +24,9 @@ void main() {
     final onBoardingBox = await Hive.openBox('onBoarding');
     if (!onBoardingBox.containsKey('isFirstTime')) await onBoardingBox.put('isFirstTime', true);
 
+    final authenticationBox = await Hive.openBox('authentication');
+    if (!authenticationBox.containsKey('signedIn')) await authenticationBox.put('signedIn', false);
+
     /// Set up error handling for Flutter errors
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
 

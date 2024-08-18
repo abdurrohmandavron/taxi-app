@@ -32,8 +32,13 @@ class SplashScreenCubit extends Cubit<SplashScreenState> {
     if (state.text.isNotEmpty) {
       Future.delayed(const Duration(milliseconds: 700), () {
         final bool isFirstTime = Hive.box('onBoarding').get('isFirstTime');
+        final bool signedIn = Hive.box('authentication').get('signedIn');
 
-        return context.router.replace(isFirstTime ? const OnBoardingRoute() : const HomeRoute());
+        return context.router.replace(isFirstTime
+            ? const OnBoardingRoute()
+            : signedIn
+                ? const HomeRoute()
+                : const SigninRoute());
       });
     }
   }
