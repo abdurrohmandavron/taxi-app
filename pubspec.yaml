@@ -50,6 +50,9 @@ dependencies:
   flutter_form_builder: ^9.3.0
   smooth_page_indicator: ^1.2.0+3
 
+  # Utilities
+  sms_autofill: ^2.4.0
+
 dev_dependencies:
   # Testing
   flutter_test:
