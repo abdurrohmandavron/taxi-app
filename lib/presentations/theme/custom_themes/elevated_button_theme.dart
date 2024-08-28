@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:yollararo/utils/constants.dart';
 
-class ADElevatedButtonTheme {
-  ADElevatedButtonTheme._();
+class YElevatedButtonTheme {
+  YElevatedButtonTheme._();
 
   static final lightElevatedButtonTheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       elevation: 0,
       foregroundColor: Colors.white,
       backgroundColor: YColors.primary,
+      minimumSize: const Size(double.infinity, 56),
       disabledBackgroundColor: const Color(0xFFEFF5FD),
       padding: const EdgeInsets.symmetric(vertical: 18),
       disabledForegroundColor: const Color(0xFFC3D3E9),
@@ -21,6 +22,7 @@ class ADElevatedButtonTheme {
     style: ElevatedButton.styleFrom(
       elevation: 0,
       foregroundColor: Colors.white,
+      minimumSize: const Size(double.infinity, 56),
       disabledBackgroundColor: const Color(0xFFEFF5FD),
       padding: const EdgeInsets.symmetric(vertical: 18),
       disabledForegroundColor: const Color(0xFFC3D3E9),

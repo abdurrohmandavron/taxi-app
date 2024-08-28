@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:yollararo/utils/constants.dart';
-import 'package:yollararo/router/router.gr.dart';
 import 'package:yollararo/presentations/widgets/header.dart';
+import 'package:yollararo/presentations/screens/signin/widgets/signin_next_button.dart';
+import 'package:yollararo/presentations/screens/signin/widgets/signin_social_button.dart';
+import 'package:yollararo/presentations/screens/signin/widgets/signin_phone_number_field.dart';
+import 'package:yollararo/presentations/screens/signin/widgets/signin_create_account_button.dart';
 
 @RoutePage()
 class SigninScreen extends StatelessWidget {
@@ -12,6 +14,7 @@ class SigninScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final phoneController = TextEditingController();
+    final errorNotifier = ValueNotifier<String?>(null);
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -33,22 +36,7 @@ class SigninScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       /// Phone Number field
-                      TextFormField(
-                        maxLength: 9,
-                        expands: false,
-                        keyboardType: TextInputType.number,
-                        controller: phoneController,
-                        style: Theme.of(context).textTheme.titleMedium,
-                        // validator: (value) => Validator.validatePhoneNumber(value),
-                        inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-                        decoration: InputDecoration(
-                          prefixText: "+998 ",
-                          contentPadding: const EdgeInsets.all(20),
-                          prefixStyle: Theme.of(context).textTheme.titleMedium,
-                          counter: const SizedBox(),
-                          labelText: "Telefon raqam",
-                        ),
-                      ),
+                      YSigninPhoneNumberField(errorNotifier: errorNotifier, phoneController: phoneController),
 
                       /// Forgot password Text
                       Row(
@@ -65,16 +53,10 @@ class SigninScreen extends StatelessWidget {
                       ),
 
                       /// Next Button
-                      SizedBox(
-                        width: double.infinity,
-                        child: ElevatedButton(
-                          onPressed: () => context.router.replace(const VerificationRoute()),
-                          child: const Text('Keyingi'),
-                        ),
-                      ),
+                      YSigninNextButton(phoneController: phoneController, errorNotifier: errorNotifier),
                       const SizedBox(height: 50),
 
-                      /// Social Sign In with Text
+                      /// Social SignIn Text
                       Text("Or login with account", style: Theme.of(context).textTheme.labelMedium),
                       const SizedBox(height: 25),
 
@@ -82,58 +64,14 @@ class SigninScreen extends StatelessWidget {
                       SizedBox(
                         height: 50,
                         width: MediaQuery.of(context).size.width,
-                        child: Row(
+                        child: const Row(
                           children: [
                             /// Google Button
-                            Expanded(
-                              child: Container(
-                                width: double.infinity,
-                                height: double.infinity,
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: const Color(0xFFECECED), width: 1),
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: const Center(
-                                  child: Padding(
-                                    padding: EdgeInsets.all(12),
-                                    child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Icon(Icons.g_mobiledata),
-                                        SizedBox(width: 4),
-                                        Text("Google"),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            const SizedBox(width: 16),
+                            YSigninSocialButton(name: "Google", image: 'assets/logos/google-logo.png'),
+                            SizedBox(width: 16),
 
                             /// Facebook button
-                            Expanded(
-                              child: Container(
-                                width: double.infinity,
-                                height: double.infinity,
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: const Color(0xFFECECED), width: 1),
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: const Center(
-                                  child: Padding(
-                                    padding: EdgeInsets.all(12),
-                                    child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Icon(Icons.facebook),
-                                        SizedBox(width: 4),
-                                        Text("Facebook"),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
+                            YSigninSocialButton(name: "Facebook", image: 'assets/logos/facebook-logo.png'),
                           ],
                         ),
                       ),
@@ -142,14 +80,7 @@ class SigninScreen extends StatelessWidget {
                       const Spacer(),
 
                       /// Register text and button
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text("Hisobingiz yo'qmi?", style: Theme.of(context).textTheme.bodyLarge!.apply(color: const Color(0xFF6C7278))),
-                          const SizedBox(width: 4),
-                          TextButton(onPressed: () {}, child: Text("Ro'yxatdan o'ting", style: Theme.of(context).textTheme.titleMedium!.apply(color: YColors.primary))),
-                        ],
-                      ),
+                      const YSigninCreateAccountButton(),
                       const SizedBox(height: 25),
                     ],
                   ),

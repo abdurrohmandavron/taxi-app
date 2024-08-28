@@ -3,10 +3,10 @@ import 'package:yollararo/utils/constants.dart';
 import 'package:yollararo/cubits/onboarding_cubit.dart';
 import 'package:yollararo/presentations/screens/onboarding/widgets/onboarding_page.dart';
 
-class OnBoardingPageView extends StatelessWidget {
-  const OnBoardingPageView({super.key, required this.controller});
+class YOnBoardingPageView extends StatelessWidget {
+  const YOnBoardingPageView({super.key, required this.controller});
 
-  final OnBoardingCubit controller;
+  final YOnBoardingCubit controller;
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +16,9 @@ class OnBoardingPageView extends StatelessWidget {
         controller: controller.pageController,
         onPageChanged: controller.updatePageIndicator,
         children: [
-          OnBoardingPage(title: YTexts.onBoardingTitle1, subTitle: YTexts.onBoardingSubTitle1, controller: controller),
-          OnBoardingPage(title: YTexts.onBoardingTitle2, subTitle: YTexts.onBoardingSubTitle2, controller: controller),
-          OnBoardingPage(title: YTexts.onBoardingTitle3, subTitle: YTexts.onBoardingSubTitle3, controller: controller),
+          YOnBoardingPage(title: YTexts.onBoardingTitle1, subTitle: YTexts.onBoardingSubTitle1, controller: controller),
+          YOnBoardingPage(title: YTexts.onBoardingTitle2, subTitle: YTexts.onBoardingSubTitle2, controller: controller),
+          YOnBoardingPage(title: YTexts.onBoardingTitle3, subTitle: YTexts.onBoardingSubTitle3, controller: controller),
         ],
       ),
     );

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:yollararo/cubits/onboarding_cubit.dart';
 
-class OnBoardingPage extends StatelessWidget {
-  const OnBoardingPage({
+class YOnBoardingPage extends StatelessWidget {
+  const YOnBoardingPage({
     super.key,
     required this.title,
     required this.subTitle,
@@ -10,7 +10,7 @@ class OnBoardingPage extends StatelessWidget {
   });
 
   final String title, subTitle;
-  final OnBoardingCubit controller;
+  final YOnBoardingCubit controller;
 
   @override
   Widget build(BuildContext context) {

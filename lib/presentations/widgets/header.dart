@@ -23,15 +23,9 @@ class YHeader extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                title,
-                style: Theme.of(context).textTheme.headlineMedium!.apply(color: Colors.white),
-              ),
+              Text(title, style: Theme.of(context).textTheme.headlineMedium!.apply(color: Colors.white)),
               const SizedBox(height: 8),
-              Text(
-                subTitle,
-                style: Theme.of(context).textTheme.titleSmall!.apply(color: Colors.white),
-              ),
+              Text(subTitle, style: Theme.of(context).textTheme.titleSmall!.apply(color: Colors.white)),
               const SizedBox(height: 16),
             ],
           ),

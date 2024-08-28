@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ADTextTheme {
-  ADTextTheme._();
+class YTextTheme {
+  YTextTheme._();
 
   static TextTheme lightTextTheme = TextTheme(
     headlineLarge: const TextStyle().copyWith(fontSize: 32.0, fontWeight: FontWeight.bold, color: Colors.black),

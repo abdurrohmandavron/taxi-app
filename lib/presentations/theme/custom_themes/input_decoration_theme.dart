@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ADInputDecorationTheme {
-  ADInputDecorationTheme._();
+class YInputDecorationTheme {
+  YInputDecorationTheme._();
 
   static InputDecorationTheme lightInputDecorationTheme = InputDecorationTheme(
     errorMaxLines: 3,
     prefixIconColor: Colors.grey,
     suffixIconColor: Colors.grey,
     errorStyle: const TextStyle().copyWith(fontStyle: FontStyle.normal),
-    // constraints: const BoxConstraints.expand(height: 14.inputFieldHeight),
     hintStyle: const TextStyle().copyWith(fontSize: 14, color: Colors.black),
     labelStyle: const TextStyle().copyWith(fontSize: 14, color: Colors.black),
     floatingLabelStyle: const TextStyle().copyWith(color: Colors.black.withOpacity(0.8)),
@@ -24,7 +23,6 @@ class ADInputDecorationTheme {
     prefixIconColor: Colors.grey,
     suffixIconColor: Colors.grey,
     errorStyle: const TextStyle().copyWith(fontStyle: FontStyle.normal),
-    // constraints: const BoxConstraints.expand(height: 14.inputFieldHeight),
     hintStyle: const TextStyle().copyWith(fontSize: 14, color: Colors.white),
     labelStyle: const TextStyle().copyWith(fontSize: 14, color: Colors.white),
     floatingLabelStyle: const TextStyle().copyWith(color: Colors.white.withOpacity(0.8)),

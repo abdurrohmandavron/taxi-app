@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:yollararo/cubits/onboarding_cubit.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class OnBoardingDotNavigation extends StatelessWidget {
-  const OnBoardingDotNavigation({super.key, required this.controller});
+class YOnBoardingDotNavigation extends StatelessWidget {
+  const YOnBoardingDotNavigation({super.key, required this.controller});
 
-  final OnBoardingCubit controller;
+  final YOnBoardingCubit controller;
 
   @override
   Widget build(BuildContext context) {

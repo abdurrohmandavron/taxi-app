@@ -7,7 +7,7 @@ import 'package:yollararo/cubits/splash_cubit.dart';
 class YSplashBackgroundIcon extends StatelessWidget {
   const YSplashBackgroundIcon({super.key, required this.state});
 
-  final SplashScreenState state;
+  final YSplashState state;
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +15,8 @@ class YSplashBackgroundIcon extends StatelessWidget {
       top: -100,
       left: -65,
       child: AnimatedOpacity(
-        opacity: state.logoOpacity != 1 ? state.logoOpacity : .15,
         duration: const Duration(milliseconds: 600),
+        opacity: state.logoOpacity != 1 ? state.logoOpacity : .15,
         child: Transform.rotate(
           angle: 15 * (pi / 180.0),
           child: const Image(

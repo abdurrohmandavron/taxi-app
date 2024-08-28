@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/annotations.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:yollararo/cubits/onboarding_cubit.dart';
+import 'package:yollararo/presentations/widgets/gradient_container.dart';
 import 'package:yollararo/presentations/screens/onboarding/widgets/onboarding_skip.dart';
 import 'package:yollararo/presentations/screens/onboarding/widgets/onboarding_page_view.dart';
 import 'package:yollararo/presentations/screens/onboarding/widgets/onboarding_next_button.dart';
@@ -14,30 +15,19 @@ class OnBoardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => OnBoardingCubit(),
-      child: BlocBuilder<OnBoardingCubit, int>(
+      create: (context) => YOnBoardingCubit(),
+      child: BlocBuilder<YOnBoardingCubit, int>(
         builder: (context, currentPageIndex) {
-          final controller = context.read<OnBoardingCubit>();
+          final controller = context.read<YOnBoardingCubit>();
 
           return Scaffold(
             body: Stack(
               children: [
                 Column(
                   children: [
-                    Expanded(
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              Color(0xFF0F0925),
-                              Color(0xFF2B547A),
-                            ],
-                            begin: Alignment.topCenter,
-                            end: Alignment.bottomCenter,
-                          ),
-                        ),
-                      ),
-                    ),
+                    /// Gradient
+                    const Expanded(child: YGradientContainer(child: SizedBox())),
+
                     SizedBox(
                       child: Padding(
                         padding: const EdgeInsets.all(16),
@@ -45,12 +35,14 @@ class OnBoardingScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             /// Page View
-                            OnBoardingPageView(controller: controller),
+                            YOnBoardingPageView(controller: controller),
 
-                            OnBoardingDotNavigation(controller: controller),
+                            /// Navigation Indicator
+                            YOnBoardingDotNavigation(controller: controller),
                             const SizedBox(height: 50),
 
-                            OnBoardingNextButton(controller: controller),
+                            /// Next Button
+                            YOnBoardingNextButton(controller: controller),
                           ],
                         ),
                       ),
@@ -59,7 +51,7 @@ class OnBoardingScreen extends StatelessWidget {
                 ),
 
                 /// Skip Button
-                OnBoardingSkip(controller: controller),
+                YOnBoardingSkip(controller: controller),
               ],
             ),
           );

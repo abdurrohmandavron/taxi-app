@@ -14,41 +14,38 @@ class AnimatedSplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => SplashScreenCubit()..startAnimation(),
-      child: Scaffold(
-        body: YGradientContainer(
-          /// Container with LinearGradient
+      create: (_) => YSplashCubit()..startAnimation(),
+      child: BlocListener<YSplashCubit, YSplashState>(
+        listener: (context, state) => context.read<YSplashCubit>().redirect(context, state),
+        child: BlocBuilder<YSplashCubit, YSplashState>(
+          builder: (context, state) {
+            return Scaffold(
+              body: YGradientContainer(
+                child: Stack(
+                  children: [
+                    /// Large Transparent Icon
+                    YSplashBackgroundIcon(state: state),
 
-          child: BlocListener<SplashScreenCubit, SplashScreenState>(
-            /// State changes listener
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        const Spacer(),
 
-            listener: (context, state) => BlocProvider.of<SplashScreenCubit>(context).redirect(context, state),
-            child: BlocBuilder<SplashScreenCubit, SplashScreenState>(
-              /// Build Widget
+                        /// Brand Lockup
+                        YSplashLockup(state: state),
+                        const Spacer(),
 
-              builder: (context, state) => Stack(
-                children: [
-                  /// Large Transparent Icon
-                  YSplashBackgroundIcon(state: state),
-
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      /// Brand Lockup
-                      const Spacer(),
-                      YSplashLockup(state: state),
-                      const Spacer(),
-
-                      /// Slogan
-                      YSplashText(state: state),
-                      const SizedBox(height: 16),
-                    ],
-                  ),
-                ],
+                        /// Slogan
+                        YSplashText(state: state),
+                        const SizedBox(height: 16),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ),
+            );
+          },
         ),
       ),
     );

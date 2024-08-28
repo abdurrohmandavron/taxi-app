@@ -4,8 +4,8 @@ import 'package:hive_flutter/adapters.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:yollararo/router/router.gr.dart';
 
-class OnBoardingCubit extends Cubit<int> {
-  OnBoardingCubit() : super(0);
+class YOnBoardingCubit extends Cubit<int> {
+  YOnBoardingCubit() : super(0);
 
   final pageController = PageController();
   final storage = Hive.box('onBoarding');

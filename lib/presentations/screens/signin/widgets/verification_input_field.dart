@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../../../cubits/verification/verification_cubit.dart';
-import '../../../../cubits/verification/verification_state.dart';
+import '../../../../cubits/verification_cubit.dart';
 
-class YCodeInputField extends StatelessWidget {
-  const YCodeInputField({
+class YVerificationInputField extends StatelessWidget {
+  const YVerificationInputField({
     super.key,
     required this.index,
     required this.cubit,
@@ -13,8 +12,8 @@ class YCodeInputField extends StatelessWidget {
   });
 
   final int index;
-  final VerificationCubit cubit;
-  final VerificationState state;
+  final YVerificationCubit cubit;
+  final YVerificationState state;
 
   @override
   Widget build(BuildContext context) {

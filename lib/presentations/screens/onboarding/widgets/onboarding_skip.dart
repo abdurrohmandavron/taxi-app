@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:yollararo/cubits/onboarding_cubit.dart';
 
-class OnBoardingSkip extends StatelessWidget {
-  const OnBoardingSkip({super.key, required this.controller});
+class YOnBoardingSkip extends StatelessWidget {
+  const YOnBoardingSkip({super.key, required this.controller});
 
-  final OnBoardingCubit controller;
+  final YOnBoardingCubit controller;
 
   @override
   Widget build(BuildContext context) {

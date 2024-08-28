@@ -4,7 +4,7 @@ import 'package:yollararo/cubits/splash_cubit.dart';
 class YSplashLockup extends StatelessWidget {
   const YSplashLockup({super.key, required this.state});
 
-  final SplashScreenState state;
+  final YSplashState state;
 
   @override
   Widget build(BuildContext context) {
