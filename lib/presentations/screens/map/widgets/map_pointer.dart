@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:yollararo/presentations/widgets/city_bubble.dart';
+
+import '../../../../presentations/widgets/city_bubble.dart';
 
 class YMapPointer extends StatelessWidget {
   const YMapPointer({

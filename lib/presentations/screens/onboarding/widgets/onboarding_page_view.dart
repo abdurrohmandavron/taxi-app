@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:yollararo/utils/constants.dart';
-import 'package:yollararo/cubits/onboarding_cubit.dart';
-import 'package:yollararo/presentations/screens/onboarding/widgets/onboarding_page.dart';
+
+import '../../../../utils/constants.dart';
+import '../../../../cubits/onboarding_cubit.dart';
+import '../../../../presentations/screens/onboarding/widgets/onboarding_page.dart';
 
 class YOnBoardingPageView extends StatelessWidget {
   const YOnBoardingPageView({super.key, required this.controller});

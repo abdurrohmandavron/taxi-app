@@ -1,8 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:yollararo/utils/constants.dart';
-import 'package:yollararo/cubits/splash_cubit.dart';
+
+import '../../../../utils/constants.dart';
+import '../../../../cubits/splash_cubit.dart';
 
 class YSplashBackgroundIcon extends StatelessWidget {
   const YSplashBackgroundIcon({super.key, required this.state});

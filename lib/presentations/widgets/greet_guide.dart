@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
-import 'package:yollararo/presentations/widgets/custom_icon.dart';
+import '../../presentations/widgets/custom_icon.dart';
 
 class YGreetGuide extends StatelessWidget {
   const YGreetGuide({super.key});

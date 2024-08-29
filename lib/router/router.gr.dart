@@ -9,11 +9,11 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i6;
-import 'package:yollararo/presentations/screens/home/home_screen.dart' as _i2;
-import 'package:yollararo/presentations/screens/onboarding/onboarding.dart' as _i3;
-import 'package:yollararo/presentations/screens/signin/signin.dart' as _i4;
-import 'package:yollararo/presentations/screens/signin/verification.dart' as _i5;
-import 'package:yollararo/presentations/screens/splash/splash.dart' as _i1;
+import '../../presentations/screens/home/home_screen.dart' as _i2;
+import '../../presentations/screens/onboarding/onboarding.dart' as _i3;
+import '../../presentations/screens/signin/signin.dart' as _i4;
+import '../../presentations/screens/signin/verification.dart' as _i5;
+import '../../presentations/screens/splash/splash.dart' as _i1;
 
 /// generated route for
 /// [_i1.AnimatedSplashScreen]

@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:yollararo/data/models/lat_long_model.dart';
+
+import '../../data/models/lat_long_model.dart';
 
 class YMapState extends Equatable {
   const YMapState({

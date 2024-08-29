@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:yollararo/presentations/widgets/search_bar.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
-import 'package:yollararo/presentations/widgets/custom_icon.dart';
+
+import '../../../../presentations/widgets/search_bar.dart';
+import '../../../../presentations/widgets/custom_icon.dart';
 
 class YDestinationInputRow extends StatelessWidget {
   const YDestinationInputRow({super.key, required this.hintText});

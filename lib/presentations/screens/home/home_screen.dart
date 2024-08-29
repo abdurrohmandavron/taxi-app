@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:auto_route/annotations.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:yollararo/cubits/sliding_panel_cubit.dart';
-import 'package:yollararo/presentations/screens/home/widgets/home_drawer.dart';
-import 'package:yollararo/presentations/screens/home/widgets/home_drawer_button.dart';
-import 'package:yollararo/presentations/screens/home/widgets/home_sliding_up_panel.dart';
+
+import '../../../cubits/sliding_panel_cubit.dart';
+import '../../../presentations/screens/home/widgets/home_drawer.dart';
+import '../../../presentations/screens/home/widgets/home_drawer_button.dart';
+import '../../../presentations/screens/home/widgets/home_sliding_up_panel.dart';
 
 @RoutePage()
 class HomeScreen extends StatelessWidget {

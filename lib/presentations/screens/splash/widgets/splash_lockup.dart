@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:yollararo/cubits/splash_cubit.dart';
+
+import '../../../../cubits/splash_cubit.dart';
 
 class YSplashLockup extends StatelessWidget {
   const YSplashLockup({super.key, required this.state});

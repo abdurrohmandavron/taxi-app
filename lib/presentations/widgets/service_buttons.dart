@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:yollararo/utils/constants.dart';
-import 'package:yollararo/cubits/services_cubit.dart';
-import 'package:yollararo/presentations/widgets/custom_icon.dart';
+import '../../utils/constants.dart';
+import '../../cubits/services_cubit.dart';
+import '../../presentations/widgets/custom_icon.dart';
 
 class YServiceButtons extends StatelessWidget {
   const YServiceButtons({super.key});

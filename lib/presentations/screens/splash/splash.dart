@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:yollararo/cubits/splash_cubit.dart';
-import 'package:yollararo/presentations/widgets/gradient_container.dart';
-import 'package:yollararo/presentations/screens/splash/widgets/splash_text.dart';
-import 'package:yollararo/presentations/screens/splash/widgets/splash_lockup.dart';
-import 'package:yollararo/presentations/screens/splash/widgets/splash_background_icon.dart';
+
+import '../../../cubits/splash_cubit.dart';
+import '../../../presentations/widgets/gradient_container.dart';
+import '../../../presentations/screens/splash/widgets/splash_text.dart';
+import '../../../presentations/screens/splash/widgets/splash_lockup.dart';
+import '../../../presentations/screens/splash/widgets/splash_background_icon.dart';
 
 @RoutePage()
 class AnimatedSplashScreen extends StatelessWidget {

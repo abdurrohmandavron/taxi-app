@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:yollararo/blocs/map/map_bloc.dart';
-import 'package:yollararo/blocs/map/map_event.dart';
-import 'package:yollararo/presentations/widgets/custom_icon.dart';
+
+import '../../../../blocs/map/map_bloc.dart';
+import '../../../../blocs/map/map_event.dart';
+import '../../../../presentations/widgets/custom_icon.dart';
 
 class YMapCurrentPositionButton extends StatelessWidget {
   const YMapCurrentPositionButton({super.key, required this.bloc});

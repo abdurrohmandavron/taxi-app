@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:yollararo/presentations/widgets/sliding_up_panel_handle.dart';
-import 'package:yollararo/presentations/screens/search/widgets/search_items.dart';
-import 'package:yollararo/presentations/screens/search/widgets/search_input_field.dart';
 
 import '../../../cubits/search_cubit.dart';
+import '../../../presentations/widgets/sliding_up_panel_handle.dart';
+import '../../../presentations/screens/search/widgets/search_items.dart';
+import '../../../presentations/screens/search/widgets/search_input_field.dart';
 
 class SearchPanel extends StatelessWidget {
   const SearchPanel({super.key});

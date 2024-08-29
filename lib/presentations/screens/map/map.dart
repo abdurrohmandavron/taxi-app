@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:yollararo/blocs/map/map_bloc.dart';
-import 'package:yollararo/blocs/map/map_state.dart';
 import 'package:yandex_maps_mapkit/yandex_map.dart';
-import 'package:yollararo/presentations/screens/map/widgets/map_pointer.dart';
 
+import '../../../blocs/map/map_bloc.dart';
+import '../../../blocs/map/map_state.dart';
 import '../../../blocs/map/map_event.dart';
+import '../../../presentations/screens/map/widgets/map_pointer.dart';
 
 class MapPanel extends StatelessWidget {
   const MapPanel({super.key});

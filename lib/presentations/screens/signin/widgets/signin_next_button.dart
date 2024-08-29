@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:yollararo/utils/validator.dart';
-import 'package:yollararo/router/router.gr.dart';
+
+import '../../../../utils/validator.dart';
+import '../../../../router/router.gr.dart';
 
 class YSigninNextButton extends StatelessWidget {
   const YSigninNextButton({

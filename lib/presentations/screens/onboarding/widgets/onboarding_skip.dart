@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:yollararo/cubits/onboarding_cubit.dart';
+
+import '../../../../cubits/onboarding_cubit.dart';
 
 class YOnBoardingSkip extends StatelessWidget {
   const YOnBoardingSkip({super.key, required this.controller});

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:yollararo/cubits/verification_cubit.dart';
+
+import '../../../../cubits/verification_cubit.dart';
 
 class YVerificationSMSPaste extends StatelessWidget {
   const YVerificationSMSPaste({super.key, required this.cubit, required this.state});

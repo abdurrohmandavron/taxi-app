@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
-import 'package:yollararo/cubits/sliding_panel_cubit.dart';
-import 'package:yollararo/presentations/screens/map/map.dart';
+
+import '../../../../cubits/sliding_panel_cubit.dart';
+import '../../../../presentations/screens/map/map.dart';
 
 class YHomeSlidingUpPanel extends StatelessWidget {
   const YHomeSlidingUpPanel({

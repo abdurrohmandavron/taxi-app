@@ -7,7 +7,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sms_autofill/sms_autofill.dart';
 
-import 'package:yollararo/router/router.gr.dart';
+import '../../router/router.gr.dart';
 
 class YVerificationCubit extends Cubit<YVerificationState> with CodeAutoFill {
   final TextEditingController controller;

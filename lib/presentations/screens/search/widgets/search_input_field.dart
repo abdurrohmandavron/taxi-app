@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:yollararo/cubits/search_cubit.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+
+import '../../../../cubits/search_cubit.dart';
 
 class YSearchInputField extends StatelessWidget {
   const YSearchInputField({

@@ -1,15 +1,15 @@
 import 'dart:async';
 
-import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:yollararo/app.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:yandex_maps_mapkit/init.dart';
-import 'package:yollararo/router/router.dart';
-import 'package:yollararo/services/get_it.dart';
-import 'package:yollararo/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+
+import 'app.dart';
+import 'services/get_it.dart';
+import 'firebase_options.dart';
 
 void main() {
   /// Run App in Error Zone
@@ -34,17 +34,14 @@ void main() {
     if (!authenticationBox.containsKey('signedIn')) await authenticationBox.put('signedIn', false);
 
     /// Initialize Yandex Mapkit
-    await dotenv.load(fileName: ".env");
+    await dotenv.load();
     await initMapkit(apiKey: dotenv.env['MAP_API_KEY']!);
 
     /// Initialize Dependencies
     setup();
 
-    /// Initialize AppRouter
-    final appRouter = AppRouter();
-
     /// Run the App
-    runApp(App(appRouter: appRouter));
+    runApp(App());
   }, (error, stack) {
     FirebaseCrashlytics.instance.recordError(error, stack);
   });

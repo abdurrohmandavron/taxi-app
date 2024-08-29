@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:yollararo/router/router.gr.dart';
+
+import '../../router/router.gr.dart';
 
 class YOnBoardingCubit extends Cubit<int> {
   YOnBoardingCubit() : super(0);

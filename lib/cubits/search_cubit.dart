@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:yollararo/cubits/sliding_panel_cubit.dart';
+import '../../cubits/sliding_panel_cubit.dart';
 
 class YSearchCubit extends Cubit<YSearchState> {
   YSearchCubit() : super(YSearchLoading());

@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:yollararo/router/router.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:yollararo/blocs/map/map_bloc.dart';
-import 'package:yollararo/cubits/search_cubit.dart';
-import 'package:yollararo/cubits/services_cubit.dart';
-import 'package:yollararo/presentations/theme/theme.dart';
-import 'package:yollararo/cubits/sliding_panel_cubit.dart';
+
+import '../router/router.dart';
+import '../blocs/map/map_bloc.dart';
+import '../cubits/search_cubit.dart';
+import '../cubits/services_cubit.dart';
+import '../presentations/theme/theme.dart';
+import '../cubits/sliding_panel_cubit.dart';
 
 class App extends StatelessWidget {
-  const App({super.key, required this.appRouter});
+  App({super.key});
 
-  final AppRouter appRouter;
+  final appRouter = AppRouter();
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +23,8 @@ class App extends StatelessWidget {
         BlocProvider(create: (context) => YServiceCubit()),
       ],
       child: MaterialApp.router(
-        theme: YTheme.lightTheme,
         title: "Yo'llararo",
+        theme: YTheme.lightTheme,
         routerConfig: appRouter.config(),
         debugShowCheckedModeBanner: false,
       ),

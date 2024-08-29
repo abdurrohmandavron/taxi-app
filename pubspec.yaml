@@ -73,11 +73,14 @@ flutter:
   # Use material design icons
   uses-material-design: true
 
+  # Project Assets
   assets:
+    - .env
     - assets/logos/
     - assets/icons/
     - assets/images/
 
+  # Fonts
   # fonts:
   #   - family: Schyler
   #     fonts:

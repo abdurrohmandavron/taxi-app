@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
-import 'package:yollararo/presentations/screens/search/search.dart';
-import 'package:yollararo/presentations/screens/destination/destination.dart';
+import '../../presentations/screens/search/search.dart';
+import '../../presentations/screens/destination/destination.dart';
 
 class YPanelCubit extends Cubit<YPanelState> {
   YPanelCubit() : super(const YPanelState(DestinationPanel(), PanelState.OPEN, 400, 35));

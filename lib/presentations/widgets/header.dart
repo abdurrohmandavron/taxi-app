@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yollararo/presentations/widgets/gradient_container.dart';
+import '../../presentations/widgets/gradient_container.dart';
 
 class YHeader extends StatelessWidget {
   const YHeader({

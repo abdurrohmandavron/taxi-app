@@ -5,13 +5,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:yandex_maps_mapkit/mapkit.dart';
 import 'package:flutter/widgets.dart' hide Animation;
 import 'package:yandex_maps_mapkit/mapkit_factory.dart';
-import 'package:yollararo/data/models/lat_long_model.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:yandex_maps_mapkit/image.dart' as ymap_image;
-import 'package:yollararo/services/app_location_service.dart';
 
 import 'map_event.dart';
 import 'map_state.dart';
+import '../../data/models/lat_long_model.dart';
+import '../../services/app_location_service.dart';
 
 class YMapBloc extends Bloc<YMapEvent, YMapState> {
   YMapBloc() : super(const YMapState(status: YMapStatus.initial)) {

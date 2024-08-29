@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:yollararo/utils/constants.dart';
-import 'package:yollararo/cubits/verification_cubit.dart';
+
+import '../../../../utils/constants.dart';
+import '../../../../cubits/verification_cubit.dart';
 
 class YVerificationResendTimer extends StatelessWidget {
   const YVerificationResendTimer({super.key, required this.cubit, required this.state});

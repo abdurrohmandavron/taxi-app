@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:yollararo/presentations/widgets/greet_guide.dart';
-import 'package:yollararo/presentations/widgets/service_buttons.dart';
-import 'package:yollararo/presentations/widgets/sliding_up_panel_handle.dart';
-import 'package:yollararo/presentations/screens/destination/widgets/destination_input_row.dart';
+
+import '../../../presentations/widgets/greet_guide.dart';
+import '../../../presentations/widgets/service_buttons.dart';
+import '../../../presentations/widgets/sliding_up_panel_handle.dart';
+import '../../../presentations/screens/destination/widgets/destination_input_row.dart';
 
 class DestinationPanel extends StatelessWidget {
   const DestinationPanel({super.key});

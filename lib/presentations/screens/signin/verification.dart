@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:yollararo/cubits/verification_cubit.dart';
-import 'package:yollararo/presentations/widgets/header.dart';
-import 'package:yollararo/presentations/screens/signin/widgets/verification_sms_paste.dart';
-import 'package:yollararo/presentations/screens/signin/widgets/verification_input_field.dart';
-import 'package:yollararo/presentations/screens/signin/widgets/verification_resend_timer.dart';
+
+import '../../../cubits/verification_cubit.dart';
+import '../../../presentations/widgets/header.dart';
+import '../../../presentations/screens/signin/widgets/verification_sms_paste.dart';
+import '../../../presentations/screens/signin/widgets/verification_input_field.dart';
+import '../../../presentations/screens/signin/widgets/verification_resend_timer.dart';
 
 @RoutePage()
 class VerificationScreen extends StatelessWidget {

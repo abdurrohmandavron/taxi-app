@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:yollararo/cubits/search_cubit.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
-import 'package:yollararo/presentations/widgets/custom_icon.dart';
+
+import '../../../../cubits/search_cubit.dart';
+import '../../../../presentations/widgets/custom_icon.dart';
 
 class YSearchItems extends StatelessWidget {
   const YSearchItems({

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:yollararo/utils/constants.dart';
-import 'package:yollararo/presentations/widgets/header.dart';
-import 'package:yollararo/presentations/screens/signin/widgets/signin_next_button.dart';
-import 'package:yollararo/presentations/screens/signin/widgets/signin_social_button.dart';
-import 'package:yollararo/presentations/screens/signin/widgets/signin_phone_number_field.dart';
-import 'package:yollararo/presentations/screens/signin/widgets/signin_create_account_button.dart';
+
+import '../../../utils/constants.dart';
+import '../../../presentations/widgets/header.dart';
+import '../../../presentations/screens/signin/widgets/signin_next_button.dart';
+import '../../../presentations/screens/signin/widgets/signin_social_button.dart';
+import '../../../presentations/screens/signin/widgets/signin_phone_number_field.dart';
+import '../../../presentations/screens/signin/widgets/signin_create_account_button.dart';
 
 @RoutePage()
 class SigninScreen extends StatelessWidget {
